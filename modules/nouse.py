@@ -1,25 +1,12 @@
-def run_func():
-    print("runnn!")
-
-
-
-
 class Function:
     def __init__(self, name, desc, executefunc):
-        self.name = name
-        self.description = desc
-        self.executefunc = executefunc
-
-    def execute(self):
-        self.executefunc()
+        self.name = name # Function name
+        self.description = desc # Function description
+        self.executefunc = executefunc # The function to call when running
 
 class Main:
     def __init__(self):
-        self.name = ""
-        self.author = ""
-        self.functions = [Function("run", "run stuff", run_func)]
-        self.version = ""
-
-    def execute(self, function):
-        if function == "run":
-            print("run!!")
+        self.name = "" # Package name
+        self.author = "" # The package author
+        self.functions = [Function("wiudjw", "qwer", real)] # Contains function classes
+        self.version = "" # Package version

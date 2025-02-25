@@ -64,14 +64,14 @@ def main():
         return
     ans = int(input("> "))
     print(f"[*] Executing function {ans}")
-    if ans > len(command_list) - 1:
+    if ans > len(command_list):
         print("[-] Invalid command id")
     else:
        try:
            command_list[ans - 1]()
        except (e):
         print("[!] Error executing!")
-
+    input()
     reset()
     main()
     

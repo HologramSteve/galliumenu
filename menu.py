@@ -45,7 +45,11 @@ def renderMenu():
     i = 0
     command_list = []
     for module_raw in modules:
-        module = module_raw()
+        try:
+            module = module_raw()
+        except:
+            print(f"[x] Error loading a module")
+            continue
         print(f"{module.name} by {module.author}\n----------------\nCommands:")
         msg = ""
         for func_raw in module.functions:
@@ -57,7 +61,7 @@ def renderMenu():
     return command_list
 
 # Main
-def main():
+def main(): 	
     command_list = renderMenu()
     if len(command_list) == 0:
         print("[x] No commands loaded, exiting...")

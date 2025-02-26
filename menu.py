@@ -50,7 +50,7 @@ def renderMenu():
         except:
             print(f"[x] Error loading a module")
             continue
-        print(f"{module.name} by {module.author}\n----------------\nCommands:")
+        print(f"{module.name} by {module.author}\nVersion {module.version}\n----------------\nCommands:")
         msg = ""
         for func_raw in module.functions:
             func = func_raw.__dict__

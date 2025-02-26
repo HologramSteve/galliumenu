@@ -1,8 +1,3 @@
-# def real():
-#     print("so real!?!?!? (what the flip)")
-
-
-
 class Function:
     def __init__(self, name, desc, executefunc):
         self.name = name # Function name
